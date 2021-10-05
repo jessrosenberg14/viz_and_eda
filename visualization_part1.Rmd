@@ -51,6 +51,9 @@ Add...color? lines? other stuff?
 ```{r}
 weather_df %>%
   ggplot(aes(x = tmin, y = tmax, color = name)) + 
-  geom_point()
+  geom_point(alpha = .3) + 
+  geom_smooth(se = F)
 ```
 
+geom_smooth: adds lines - drawing a line through the middle of the datapoints for each dataset
+alpha blending: what degree of transparency do you want to have of the points
