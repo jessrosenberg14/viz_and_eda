@@ -34,3 +34,23 @@ weather_df %>%
   ggplot(aes(x = tmin, y = tmax)) + geom_point()
 ```
 
+GGplot: give me a dataset, tell me what variables map to where then start stacking up geometries
+
+Can save ggplots
+```{r}
+ggp_tmax_tmin =
+  weather_df %>%
+  ggplot(aes(x = tmin, y = tmax)) + 
+  geom_point()
+```
+
+## Let's fancy it up
+
+Add...color? lines? other stuff?
+
+```{r}
+weather_df %>%
+  ggplot(aes(x = tmin, y = tmax, color = name)) + 
+  geom_point()
+```
+
